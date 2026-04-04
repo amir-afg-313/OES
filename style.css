@@ -9,6 +9,8 @@
     --cta-bg:#EAF0F2;
     --primery-h:#181818;
 }
+@font-face { font-family: 'PashtoFont'; 
+    src: url('fonts/majalla.ttf') format('woff'); font-weight: normal; font-style: normal; }
 *{
     padding: 0;
     margin: 0;
@@ -19,7 +21,7 @@ html{
 }
 body{
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,"Noto Naskh Arabic",Arial, sans-serif;
+    font-family:'PashtoFont', sans-serif;
     line-height:1.5 ;
     background-color: var(--bg);
 
@@ -88,32 +90,89 @@ z-index: 10;
 .signup{
     padding: .7rem 2rem;
     border-radius: 40px;
-    background:var(--grad-primary);
+    background:var(--primary);
     border: 2px solid var(--primary);
     color: var(--bg);
 }
 .hero-s{
     background-color: var(--cta-bg);
-    padding: 4.8rem 0 9.6rem 0;
+    padding: 4.8rem 0 7rem 0;
+    border-radius: 8px;
 }
 .hero{
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
-    padding: 0 9rem;
-    gap: 1rem;
+    padding: 0 6.5rem;
+    gap: 4rem;
 }
 .primary-h{
     color: var(--primery-h);
-    line-height: 1.1;
+    line-height: 1;
     margin-bottom: 3rem;
-    font-size: 62px;
+    font-size: 60px;
     font-weight: 600;
 }
 #testPartner{
     color: var(--primary);
+   
 }
+.hero-desription{
+    margin-bottom: 2rem;
+    font-size: 22px;
+}
+.access-student{
+    padding: 1.5rem 5rem;
+    background-color: var(--secondary);
+    
+}
+.access{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.head2,.p2{
+    color: #ffffff;
+}
+.access-in{
+    padding: .7rem 2.5rem;
+    outline: none;
+    border-radius: 9px;
+    border: none;
+    margin-left: 1rem;
+    font-size: 18px;
+}
+.sub-btn{
+    padding: .7rem 1rem;
+    border-radius: 9px;
+    background-color: var(--primary);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+.support-c{
+    padding: 1.5rem 5rem;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+}
+.c-logo{
+    width: 120px;
+}
+
+.support{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.more{
+    background:var(--primary);
+}
+
 
 
 
