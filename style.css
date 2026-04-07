@@ -133,8 +133,12 @@ z-index: 10;
     align-items: center;
 
 }
-.head2,.p2{
+.p2{
     color: #ffffff;
+}
+.head2{
+    color: var(--primary);
+    font-weight: 600;
 }
 .access-in{
     padding: .7rem 2.5rem;
@@ -155,23 +159,141 @@ z-index: 10;
     
 }
 .support-c{
-    padding: 1.5rem 5rem;
-    background-color: var(--bg);
+    padding: 1.5rem 0;
+    background-color:#fbfbfb;
     box-shadow: var(--shadow);
 }
-.c-logo{
-    width: 120px;
+.support{
+    width: 100%;
+    text-align:right;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+.head3{
+    color: var(--secondary);
+    font-size: 48px;
+    font-weight: 700;
+}
+.s-text{
+text-align: center;
+
+}
+.s-description{
+    font-size: 24px;
+    color: rgb(104, 103, 103);
+    line-height: 1;
+    margin: 1rem 0 3rem 0;
+}
+.support{
+    width: 100%;
+    text-align:right;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    
+}
+.S-pics{
+    display:flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll-s 70s linear infinite;
+}
+.S-pics:hover {
+    animation-play-state: paused;
+  }
+
+.slider{
+    width: 100%;
+}
+.S-pics img{
+    margin: 0 30px;
+    height: 60px;
+}
+@keyframes scroll-s{
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform:translateX(0)
+    }
 }
 
-.support{
+.about-c{
+ background-color:var(--bg);
+ padding: 1rem 2rem;
+}
+.about{
+    margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 1rem;
 }
-.more{
-    background:var(--primary);
+.cards{
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column; 
+    width: 50%;
 }
+.card img{
+    width: 80px;
+}
+.card{
+padding: 2rem;
+display: flex;
+gap: 2rem;
+margin-bottom: 1.7rem;
+box-shadow: var(--shadow);
+border-radius: 22px;
+}
+.card-h3{
+    font-size: 26px;
+}
+.card-p{
+    font-size: 18px;
+}
+.card-right{
+    margin-right: 3rem;
+}
+.card-left{
+    margin-left: 3rem;
+}
+.about-text{
+    padding: 1.5rem 5rem 1.5rem 0;
+    width: 50%;
+}
+.about-p1{
+    font-size: 26px ;
+    color:rgb(104, 103, 103) ;
+    letter-spacing: 1.2;
+    margin-bottom: .7rem;
+}
+.about-h2{
+    font-weight: 900;
+    font-size: 52px;
+    color: var(--secondary);
+    margin-bottom: .7rem;
+    line-height: 1;
+}
+.about-p2{
+    color: rgb(104, 103, 103);
+    font-size:24px ;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.about-list{
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 24px;
+}
+.about-list li::before{
+    content: "\2714";
+    color:#f8b81f ;
+}
+
+.about-list li{
+    margin-bottom: .7rem;
+}
+
 
 
 
