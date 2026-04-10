@@ -219,6 +219,33 @@ text-align: center;
     }
 }
 
+.section-how{
+    padding: 6.6rem 0;
+    
+}
+.step-number{
+font-size: 9.8rem;
+font-weight: 600;
+color: #ddd;
+margin-bottom: 1.2rem;
+}
+
+
+.step-img-box{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.step-img{
+ width: 70%;
+    border-radius: 6px;
+}
+
+.step-discription{
+    font-size: 2rem;
+    line-height: 1.8;
+}
 .about-c{
  background-color:var(--bg);
  padding: 1rem 2rem;
@@ -293,6 +320,85 @@ border-radius: 22px;
 .about-list li{
     margin-bottom: .7rem;
 }
+footer{
+padding: 8rem 0 0 0;
+background-color:var(--cta-bg);
+}
+
+.grid{
+        display: grid;
+        column-gap: 6.4rem;
+        row-gap: 9.6rem;
+       
+    }
+.footer-grid{
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+
+}
+.footer{
+    text-align: center;
+    margin-top: 2rem;
+    background-color: var(--secondary);
+    padding: 1.5rem;
+}
+logo-col{
+    display: flex;
+   flex-direction: column;
+}
+.logo-text{
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+.flogo-link{
+    display: block;
+    margin-bottom: 1rem;
+
+}
+.social-link{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.icons{
+    height: 2.4rem;
+    width: 2.4rem;
+}
+.contacts{
+font-size:1.5rem;
+font-style: normal;
+line-height: 1.6;
+}
+.footer-heading{
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 3rem;
+}
+.contacts p:first-child{
+    margin-bottom: 1.7rem;
+   color: var(--black);
+}
+.footer-links{
+    text-decoration: none;
+    color:var(--black);
+}
+.footer-nav{
+    list-style: none;
+    font-size:1.5rem;
+font-style: normal;
+line-height: 1.6;
+}
+.footer-links:hover,
+.footer-links:active{
+    color: #555;
+}
+.copyright{
+    font-size:24px;
+   color: var(--bg);
+}
+
 
 
 
