@@ -30,6 +30,7 @@ body{
     width:max(1200px);
     margin-inline: auto;
 }
+
 .header{
 width: 100%;
 background-color: var(--bg);
@@ -421,6 +422,9 @@ transition: all 0.3s;
 .tag-m{
     margin-bottom: 2rem;
 }
+.start{
+    background-color: var(--secondary);
+}
 /****** Freq Asked Question **********/
 .F-question{
     background-color: var(--bg);
@@ -582,6 +586,82 @@ color: #555;
     border-radius: 15px;
     border: none;
     outline: none;
+}
+/********* create exam  **********/
+
+.exam-crud{
+    padding: 4rem 0;
+}
+.container-e {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    color: var(--secondary);
+    box-shadow: var(--shadow);
+    background-color: var(--bg);
+}
+
+h1 {
+    text-align: center;
+    color:var(--secondary);
+}
+
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color:var(--primary);
+    color: white;
+}
+
+.update-btn {
+    background-color: var(--secondary);
+    color: white;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+     margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
 }
 /**********footer***************/
 footer{
