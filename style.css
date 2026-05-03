@@ -18,26 +18,36 @@
 }
 html{
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 body{
 
-    font-family:'PashtoFont', sans-serif;
-    line-height:1.5 ;
-    background-color: var(--bg);
-
+font-family:'PashtoFont', sans-serif;
+line-height: 1;
+font-weight: 400;
+color: #555;
+overflow-x: hidden;
+background-color: var(--bg);
 }
-.container{
-    width:max(1200px);
-    margin-inline: auto;
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
 }
-
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+/*-------------------header-----------------*/
 .header{
-width: 100%;
 background-color: var(--bg);
 box-shadow: var(--shadow);
 position: sticky;
 top: 0;
 z-index: 10;
+ padding: 0 4.8rem;
 }
 .nav-row{
     display: flex;
@@ -61,7 +71,7 @@ z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 4.3rem;
     font-size: 18px;
     font-weight: 600;
    
@@ -89,30 +99,36 @@ z-index: 10;
     transition: all .2s;
 }
 .signup{
-    padding: .7rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 40px;
     background:var(--primary);
     color: var(--bg);
+    font-size: 16px;
+    font-weight: 600;
 }
 
 /***********  hero section  ************/
 .hero-s{
     background-color: var(--cta-bg);
-    padding: 4.8rem 0 7rem 0;
-    border-radius: 8px;
+     padding: 4.8rem 0 9.6rem 0;
 }
-.hero{
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 0 6.5rem;
-    gap: 4rem;
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+.hero img{
+    width: 100%;
 }
 .primary-h{
     color: var(--primery-h);
     line-height: 1;
     margin-bottom: 3rem;
-    font-size: 60px;
+    font-size: 6.5rem;
     font-weight: 600;
 }
 #testPartner{
@@ -120,45 +136,52 @@ z-index: 10;
    
 }
 .hero-desription{
-    margin-bottom: 2rem;
-    font-size: 22px;
+    margin-bottom: 3rem;
+    font-size: 26px;
 }
+/*-----assess student-----------*/
 .access-student{
     padding: 1.5rem 5rem;
     background-color: var(--secondary);
     
 }
 .access{
-    margin: 0 auto;
-    display: flex;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
 
 }
 .p2{
     color: #ffffff;
+    font-size: 2.3rem;
 }
 .head2{
-    color: var(--primary);
-    font-weight: 600;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.code-form{
+    display: flex;
+    gap: 1rem;
 }
 .access-in{
-    padding: .7rem 2.5rem;
+  padding: 2rem;
+    width: 60%;
     outline: none;
-    border-radius: 9px;
+    border-radius: 8rem;
     border: none;
-    margin-left: 1rem;
-    font-size: 18px;
+    font-size: 1.1rem;
+    margin: 0;
 }
 .sub-btn{
-    padding: .7rem 1rem;
-    border-radius: 9px;
+    width: 30%;
+    border-radius:8rem;
     background-color: var(--primary);
     border: none;
     color: white;
-    font-size: 18px;
-    font-weight: 700;
-    
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1.2rem;
 }
 /*     support compeny********/
 .support-c{
@@ -176,7 +199,7 @@ z-index: 10;
 }
 .head3{
     color: var(--secondary);
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
 }
 .s-text{
@@ -184,7 +207,7 @@ text-align: center;
 
 }
 .s-description{
-    font-size: 24px;
+    font-size: 1.8rem;
     color: rgb(104, 103, 103);
     line-height: 1;
     margin: 1rem 0 3rem 0;
@@ -245,7 +268,10 @@ font-weight: 600;
 color: #ddd;
 
 }
-
+.theetery-h{
+    font-weight: 700;
+    font-size: 2rem;
+}
 .step-img-box{
    display: flex;
    align-items: center;
@@ -263,15 +289,15 @@ color: #ddd;
 }
 .sub-h{
     color: var(--primary);
-    font-size: 25px;
+    font-size: 1.3rem;
     font-weight: 900;
   
 }
 .F-title{
 text-align: center;
 }
-.head2{
-font-size: 52px;
+.head2-f{
+font-size: 3.25rem;
 color: var(--secondary);
 font-weight: 900;
 }
@@ -303,10 +329,10 @@ box-shadow: var(--shadow);
 border-radius: 22px;
 }
 .card-h3{
-    font-size: 26px;
+    font-size: 1.4rem;
 }
 .card-p{
-    font-size: 18px;
+    font-size: 1.4rem;
 }
 .card-right{
     margin-right: 3rem;
@@ -319,14 +345,14 @@ border-radius: 22px;
     width: 50%;
 }
 .about-p1{
-    font-size: 26px ;
+    font-size: 1.4rem ;
     color:rgb(104, 103, 103) ;
     letter-spacing: 1.2;
     margin-bottom: .7rem;
 }
 .about-h2{
     font-weight: 900;
-    font-size: 52px;
+    font-size:3rem;
     color: var(--secondary);
     margin-bottom: .7rem;
     line-height: 1;
@@ -340,7 +366,7 @@ border-radius: 22px;
 .about-list{
     list-style-type: none;
     padding-left: 0;
-    font-size: 24px;
+    font-size: 1.2rem;
 }
 .about-list li::before{
     content: "\2714";
@@ -367,7 +393,7 @@ border-radius: 22px;
  .secondry-h{
 margin-bottom: 2rem;
 font-weight: 700;
-font-size: 42px;
+font-size: 2.5rem;
 color: var(--secondary);
  }
  .Details{
@@ -428,10 +454,10 @@ transition: all 0.3s;
 /****** Freq Asked Question **********/
 .F-question{
     background-color: var(--bg);
-    padding: 4rem 0;
+    padding: 4rem 4rem;
 }
 .fq-title{
-font-size: 44px;
+font-size: 2.7rem;
 font-weight: 700;
 color: var(--secondary);
 margin-bottom: 2rem;
@@ -446,7 +472,7 @@ margin-bottom: 2rem;
 box-shadow: var(--shadow);
 }
 .fq-h button{
-   font-size: 22px;
+   font-size: 1.8rem;
    font-weight: 700;
    color: var(--bg);
    background-color: var(--primary);
@@ -457,7 +483,7 @@ box-shadow: var(--shadow);
    border-radius: 11px 11px 0 0;
 }
 .fq-p{
-    font-size: 18px;
+    font-size: 1.8rem;
     color: var(--color);
     margin: 0 1rem 0 1rem;
     padding: 2rem;
@@ -565,7 +591,7 @@ color: #555;
     margin-bottom: 1.6rem;
 }
 .con-form label{
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--secondary);
     margin-bottom: .5rem;
@@ -574,13 +600,13 @@ color: #555;
     padding: 1.2rem;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 1rem;
     border-radius: 15px;
 }
 .btn-form-login{
     padding: 1rem 1.7rem;
     color: var(--bg);
-    font-size: 240x;
+    font-size: 1.2rem;
     font-weight: 600;
     background-color: var(--primary);
     border-radius: 15px;
@@ -605,7 +631,14 @@ h1 {
     text-align: center;
     color:var(--secondary);
 }
-
+.exam-titel{
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--cta-bg);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    text-align: center;
+}
 .form-box {
     background: white;
     padding: 20px;
@@ -690,7 +723,7 @@ logo-col{
    flex-direction: column;
 }
 .logo-text{
-    font-size: 18px;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     color: var(--secondary);
     font-weight: 600;
