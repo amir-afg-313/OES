@@ -61,9 +61,7 @@ z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
-
-   
+    gap: 8rem;  
 }
 
 .list{
@@ -71,7 +69,7 @@ z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4.3rem;
+    gap: 4rem;
     font-size: 18px;
     font-weight: 600;
    
@@ -97,6 +95,8 @@ z-index: 10;
     text-align: center;
     background:var(--bg);
     transition: all .2s;
+    font-size: 16px;
+    font-weight: 600;
 }
 .signup{
     padding: 1rem 2rem;
@@ -106,7 +106,19 @@ z-index: 10;
     font-size: 16px;
     font-weight: 600;
 }
-
+.btn-mobile-nav{
+border: none;
+background: none;
+cursor: pointer;
+display: none;
+}
+.icon-mobile-nav{
+width: 4.8rem;
+height: 4.8rem;
+}
+.close-icon{
+    display: none;
+}
 /***********  hero section  ************/
 .hero-s{
     background-color: var(--cta-bg);
@@ -179,9 +191,9 @@ z-index: 10;
     background-color: var(--primary);
     border: none;
     color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem;
 }
 /*     support compeny********/
 .support-c{
@@ -234,7 +246,7 @@ text-align: center;
 }
 .S-pics img{
     margin: 0 30px;
-    height: 60px;
+    height:3.7rem;
 }
 @keyframes scroll-s{
     0% {
@@ -422,7 +434,7 @@ strong{
     font-weight: 600;
 }
 .tag{
-    display: inline-block;
+    display:inline-block;
     text-transform:uppercase;
     background-color:var(--primary);
     font-size: 1.1rem;
@@ -431,8 +443,9 @@ strong{
     border-radius: 100px;
     font-weight: 600;
 }
+
 .class{
-    padding: 0 0 1rem 0;
+    padding: 0 0 4.8rem 0;
     border-radius: 12px;
 box-shadow: var(--shadow);
 overflow: hidden;
@@ -444,12 +457,15 @@ transition: all 0.3s;
 }
 .class2{
     padding:2rem;
+   display: flex;
+   flex-direction: column;
 }
 .tag-m{
     margin-bottom: 2rem;
 }
 .start{
     background-color: var(--secondary);
+   text-align: center;
 }
 /****** Freq Asked Question **********/
 .F-question{
@@ -490,7 +506,7 @@ box-shadow: var(--shadow);
 }
 /***** sigin up **************/
 .section-sigin{
-padding: 4.8rem 0 12.8rem 0;
+padding: 4.8rem 0 8rem 0;
 }
 .sigin
 {
@@ -502,10 +518,14 @@ padding: 4.8rem 0 12.8rem 0;
     overflow: hidden;
 }
 .sigin .secondry-h{
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 .sigin-text-box{
-padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+padding: 2rem 6rem 3rem 6rem;
+}
+.container-2{
+    max-width: 70rem;
+    margin: 2rem auto;
 }
 .sigin-text{
 font-size: 1.8rem;
@@ -518,28 +538,29 @@ margin-bottom: 2rem;
     background-image:linear-gradient(to right bottom,
     rgba(24, 100, 171,0.35),rgba(123, 81, 252, 0.35)), 
     url(img/cta.jpg);
-   
+   background-position: center;
     background-size:cover;
 }
 .sigin-form{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
-    row-gap: 2rem;
+    gap: 2rem;
+
 }
 .sigin-form label{
 display: block;
 font-size: 1.6rem;
-font-weight: 500;
-margin-bottom: 1rem;
+font-weight: 600;
+margin-bottom: .7rem;
 color: #1f1e1e;
 }
-sigin-form input::placeholder{
+.sigin-form input::placeholder{
     color: #aaa;
+    font-size: 1.6rem;
 }
+
 .sigin-form input,
 .sigin-form select{
-    width: 100%;
     padding: 1rem;
     font-size: 1.1rem;
     font-family: inherit;
@@ -548,6 +569,11 @@ sigin-form input::placeholder{
     background-color: #fdf2e9;
     border-radius: 9px;
     box-shadow:var(--shadow);
+}
+#select-where{
+    width: 100%;
+      color: #aaa;
+    font-size: 1.6rem;
 }
 .btn-form{
     background-color: var(--secondary);
@@ -702,12 +728,6 @@ padding: 8rem 0 0 0;
 background-color:var(--cta-bg);
 }
 
-.grid{
-        display: grid;
-        column-gap: 6.4rem;
-        row-gap: 9.6rem;
-       
-    }
 .footer-grid{
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
 
