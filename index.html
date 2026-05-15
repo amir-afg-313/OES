@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examnation System</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaQuery.css">
-    <script defer src="javaScript.js"></script>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/mediaQuery.css">
+    
 </head>
 <body>
     <header class="header">
@@ -51,16 +51,18 @@
         <h2 class=" head2">ایا تاسو غواړی ازموینه کي ګډون وکړي؟</h2>
         <p class=" p2"> اکاونټ ثبت کولو ته اړتیا نسته،تاسو مهرباني وکړي د خپلي ازمویني کوډ ولیکي</p>
         </div>
-        <form action="" class="code-form">
-            <input type="password" class="access-in" placeholder="خپل کوډ دلته ولیکي!">
+        <form action="" class="code-form" id="examForm">
+            <input type="password" class="access-in" id="examCode" placeholder="خپل کوډ دلته ولیکي!">
             <button class="sub-btn" type="submit" >ازموینه پیل کړي</button>
         </form>
+          <div id="message"></div>
         </div>
+   
         </section>
         <section class="support-c">
         <div class="support">
             <div class="s-text">
-                <h2 class="head3 .secondry-h"> تاسو کولای سي چي په انلاین ډول ازمویني ،او تمریناتي امتحانونه جوړ کړي</h2>
+                <h2 class="head3"> تاسو کولای سي چي په انلاین ډول ازمویني ،او تمریناتي امتحانونه جوړ کړي</h2>
                 <p class="s-description">موږ  د هیواد په سطحه د وزارتونو، ریاستونو،او نړیوالو تعلیمي مراکزو ته په لوړ کیفیت  خدمات وړاندی کړیدي</p>
             </div>
             <div class="slider">
@@ -99,7 +101,7 @@
           </div>
 
           <div class="container grids grid-colums grid--centerv"> 
-            <div class="step-text-box"> 
+            <div class="step-text-box hidden-left"> 
              <h3 class="theetery-h ">
               په انلاین ډول د ازمویني لپاره غوره پروسه
              </h3>
@@ -110,16 +112,16 @@
                شفافه ساده پروسه وړاندي کړه چيری چي مشتری کولای سي په خوندي ډول ازمویني کنټرول کړي .
              </p>
             </div>
-          <div class="step-img-box">
+          <div class="step-img-box first-box hidden-right">
             <img class="step-img" src="/img/process_of_online_exam_software.webp" alt="js">
           </div>
           
 
 
-          <div class="step-img-box">
+          <div class="step-img-box hidden-left">
             <img class="step-img step-Emoji" src="/img/multiple.jpeg" alt="js">
           </div>
-          <div class="step-text-box"> 
+          <div class="step-text-box hidden-left"> 
             <p class="step-number">01</p>
          <h3 class="theetery-h">   په یو وخت د همهاله ازموینو ورکونکو ته د خدماتو وړاندی کول
          </h3>
@@ -132,7 +134,7 @@
         </div>
       
 
-      <div class="step-text-box"> 
+      <div class="step-text-box hidden-left"> 
         <p class="step-number">02</p>
      <h3 class="theetery-h">مسلکی او زیرکه څارنه 
         
@@ -147,15 +149,15 @@
          شي.
      </p>
     </div>
-  <div class="step-img-box">
+  <div class="step-img-box hidden-right">
     <img class="step-img" src="/img/protact.jpeg" alt="js">
   </div>
 
 
-  <div class="step-img-box">
+  <div class="step-img-box hidden-right" >
     <img class="step-img" src="img/theme.jpeg" alt="js">
     </div>
-  <div class="step-text-box"> 
+  <div class="step-text-box hidden-left"> 
     <p class="step-number">03</p>
  <h3 class="theetery-h">پرمختللی د ازموینې بڼې جوړولو سیسټم
     
@@ -218,7 +220,7 @@
       <section class="F-question">
       <div class="container">
       <h2 class="fq-title secondary-h">ډیر پوښتل سوی سوالونه</h2>
-      <div class="questions  grids grid-colums">
+      <div class="questions  grids grid-colums faq-grid-col">
         <div class="faq">
 
           <h5 class="fq-h"><button>ایا زما معلومات خوندي دي ؟</button></h5>
@@ -313,5 +315,7 @@
             <p class="copyright"> <small>&copy;</small> 2025, All Rights Reserved | Terms of Use|Help & Support</p>
         </div>
     </footer>
+   
+    <script defer src="JS/javaScript.js"></script>
 </body>
 </html>

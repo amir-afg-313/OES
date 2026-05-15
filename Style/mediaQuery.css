@@ -1,0 +1,365 @@
+/* 1344px  small pc*/
+
+@media(max-width:84rem){
+    .hero{
+        max-width: 120rem;
+    }
+    .primary-h{
+        font-size:6rem;
+
+    }
+    .p2{
+    font-size: 2rem;
+}
+}
+/*1200px landscap tablete*/
+@media(max-width:75rem){
+ .html{
+    font-size: 56.25%;
+}
+.p2{
+    font-size: 1.6rem;
+}
+.header{
+    padding: 0 3.2rem;
+}
+.hero{
+    padding: 0 5rem;
+    gap: 4.8rem;
+}
+}
+.login-section{
+   width: 75rem;
+    margin: 1rem auto;
+}
+/* 1070*/
+@media(max-width:67rem){
+.primary-h{
+    font-size: 5.5rem;
+}
+.card img{
+    width: 75px;
+}
+.card-h3{
+    font-size: 1.2rem;
+}
+.card-p{
+    font-size: 1.2rem;
+}
+}
+@media(max-width:61.75rem){
+.primary-h{
+    font-size: 5.2rem;
+}
+}
+.login-section{
+    width:61rem;
+    margin: 2rem auto;
+}
+/* tablete  944*/
+@media(max-width:59rem){
+.html{
+    font-size: 50%;
+}
+.list{
+    gap: 1rem;
+}
+.signup{
+    padding: 1rem 1.5rem;
+}
+.primary-h{
+    font-size: 4.5rem;
+}
+.hero{
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+#testPartner{
+    color: var(--primery-h);
+   
+}
+.p2{
+    font-size: 2rem;
+}
+.t-signup{
+    font-weight: 600;
+    font-size: 22px;
+    padding: 1.5rem 2rem;
+}
+.nav-list{
+    gap: 1.5rem;
+}
+.access{
+    grid-template-columns: 1fr;
+   text-align: center;
+
+}
+.grid{
+    row-gap: 4rem;
+}
+.code-form{
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.access-in{
+    width: 30%;
+}
+.sub-btn{
+    width: fit-content;
+    padding:1.5rem 1rem ;
+}
+.grid-colum-4{
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 4rem;
+}
+.S-pics img{
+   
+    height:3rem;
+}
+.step-number{
+    font-size: 7.4rem;
+}
+.sigin-form{
+    grid-template-columns: 1fr;
+}
+.grid-footer{
+    column-gap:2rem ;
+}
+.header{
+    padding: 0 1rem;
+}
+.nav-row{
+    gap: 1rem;
+}
+.list{
+    font-size: 16px;
+}
+.head2-f{
+    font-size: 1.7rem;
+}
+.btn-mobile-nav{
+    display: block;
+    z-index: 999;
+}
+.main-nav{
+    background-color:#ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0,0,0.08);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100vh;
+     transform: translateX(-100%);
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+   
+    margin-top: 7.4rem;
+    padding-top: 2rem;
+    gap: 5rem;
+ opacity: 0;
+ visibility: hidden;
+ pointer-events: none;
+
+   transition: all 0.5s ease-in;
+ 
+}
+.open-nav .main-nav{
+ opacity: 1;
+ visibility:visible;
+ pointer-events:auto;
+ transform: translateX(0);
+} 
+.open-nav .btn-mobile-nav .close-icon{
+display: block;
+
+}
+
+.open-nav .btn-mobile-nav .menue-icon{
+display:none;
+}
+.list{
+    font-weight: 700;
+    font-size: 2.5rem;
+    flex-direction: column;
+    align-self: center;
+gap:3rem;
+}
+.main-nav nav-link:link:visited{
+    text-decoration: underline;
+
+} 
+.nav-button{
+    gap: 3rem;
+}
+
+.section-sigin{
+padding: 4.8rem 4rem 8rem 4rem;
+}
+}
+.cards{
+padding-left:2rem ; 
+ padding-right: 0;  
+width: 70%;
+}
+.card-right{
+    margin-right: 1rem;
+}
+.card-left{
+    margin-left: 1rem;
+}
+.about-text{
+    padding-right:1.5rem;
+    width: 60%;
+}
+.about-c.container{
+    padding: 1rem 0;
+}
+.login-section{
+    width:59rem;
+
+}
+
+
+/* small tablate  704*/
+@media(max-width:44.31rem){
+.primary-h{
+    font-size: 3.3rem;
+}
+.access-in{
+    width: 40%;
+}
+.sub-btn{
+    width:fit-content;
+   
+}
+.p2{
+   
+    font-size: 1.7rem;
+}
+.head3{
+   font-size: 2.5rem;
+}
+.s-description{
+    padding: 0 3rem;
+ text-wrap: wrap;
+}
+
+    .grid-footer{
+          grid-template-columns:repeat(6,1fr);
+    }
+    .nav-col{
+    grid-row:1;
+    grid-column: span 2;
+}
+.logo-col,.address-col{
+    grid-column: span 3;
+}
+.theetery-h{
+    font-size: 1.8rem;
+}
+.step-img{
+ width: 100%;
+    border-radius: 6px;
+}
+.secondry-h{
+    font-size: 2rem;
+}
+.faq-grid-col{
+grid-template-columns: 1fr;
+}
+
+.card-p{
+    font-size: 1.6rem;
+}
+.card-h{
+    font-size: 1.8;
+    font-weight: 700;
+}
+.about-p1{
+    font-size: 1rem;
+}
+.about-h2{
+    font-size: 2rem;
+}
+}
+.login-section{
+    width:44rem;
+  
+}
+/* 590 mobile */
+@media(max-width:37.76em){
+   .grid-colum-4{
+grid-template-columns: 1fr;
+    }
+    .grid-colums{
+grid-template-columns: 1fr;
+    }
+    .access-in{
+    width: 90%;
+}
+.sub-btn{
+    width: fit-content;
+}
+.head3{
+    font-size: 2rem;
+    text-wrap: wrap;
+    padding:0 2rem ;
+}
+.F-question{
+
+    padding: 4rem 0;
+}
+
+.logos img{
+height: 2.5rem;
+}
+.step-img-box:nth-child(2){
+grid-row: 1;
+}
+
+.step-img-box:nth-child(6){
+    grid-row: 5;
+    }
+   .step-img-box{
+    margin-bottom: 1rem;
+   }
+   .siging-img{
+     
+         background-image:url(img/speedexamlogo.png);
+    background-size: cover;
+      }
+.sigin{
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 2fr;
+}
+
+   .cards{
+    width: 100%;
+}
+.about-text{
+    width: 100%;
+}
+.about-list{
+    font-size: 2rem;
+}
+.about-p1{
+    font-size: 1.8rem;
+}
+.about{
+    flex-direction: column;
+}
+.login-section{
+    width: 37rem;
+}
+.login-form{
+    width:23rem ;
+}
+#message{
+    top: 18rem;
+    left:5rem;
+}
+}
+
+

@@ -10,7 +10,7 @@
     --primery-h:#181818;
 }
 @font-face { font-family: 'PashtoFont'; 
-    src: url('fonts/majalla.ttf') format('woff'); font-weight: normal; font-style: normal; }
+    src: url('../fonts/majalla.ttf') format('woff'); font-weight: normal; font-style: normal; }
 *{
     padding: 0;
     margin: 0;
@@ -151,7 +151,7 @@ height: 4.8rem;
     margin-bottom: 3rem;
     font-size: 26px;
 }
-/*-----assess student-----------*/
+/*-----acssess student-----------*/
 .access-student{
     padding: 1.5rem 5rem;
     background-color: var(--secondary);
@@ -161,7 +161,7 @@ height: 4.8rem;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
-
+position: relative;
 }
 .p2{
     color: #ffffff;
@@ -194,6 +194,35 @@ height: 4.8rem;
     font-size: 1.5rem;
     font-weight: 700;
     padding: 1rem;
+}
+#message{
+    position:absolute;
+    top:7rem;
+    left:23rem;
+    color:var(--primary);
+
+    padding: 1rem 2rem;
+    border-radius: 12px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-20px);
+
+    transition: all 0.4s ease;
+}
+#message.show{
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
 }
 /*     support compeny********/
 .support-c{
@@ -289,6 +318,11 @@ color: #ddd;
    align-items: center;
    justify-content: center;
 
+    transition-delay: 0.3s;
+}
+
+.step-text-box{
+    transition-delay: 0.2s;
 }
 .step-img{
  width: 70%;
@@ -312,6 +346,26 @@ text-align: center;
 font-size: 3.25rem;
 color: var(--secondary);
 font-weight: 900;
+}
+
+
+.hidden-left{
+    opacity: 0;
+    transform: translateX(-100px);
+
+    transition: all 1s ease;
+}
+
+.hidden-right{
+    opacity: 0;
+    transform: translateX(100px);
+
+    transition: all 1s ease;
+}
+
+.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 /**************about section**************/
 .about-c{
@@ -467,6 +521,9 @@ transition: all 0.3s;
     background-color: var(--secondary);
    text-align: center;
 }
+
+
+
 /****** Freq Asked Question **********/
 .F-question{
     background-color: var(--bg);
@@ -599,7 +656,7 @@ color: #555;
     margin: 1rem auto;
 }
 .login-form{
-    width: 380px;
+    width: 23rem;
     margin: 4rem auto;
     padding: 2rem;
     background-color:#dfedf2;
