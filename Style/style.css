@@ -539,10 +539,30 @@ margin-bottom: 2rem;
 .questions{
     column-gap: 6rem;
     row-gap: 2rem;
+
+    align-items: start;
 }
 .faq{
+    position: relative;
+
+    z-index: 1;
+
     border-radius: 11px;
-box-shadow: var(--shadow);
+
+    box-shadow: var(--shadow);
+
+    overflow: visible;
+
+    transition: all 0.3s;
+
+    background-color: white;
+}
+.faq.active{
+
+    z-index: 9999;
+}
+.faq:hover{
+    transform: translateY(-5px);
 }
 .fq-h button{
    font-size: 1.8rem;
@@ -556,10 +576,25 @@ box-shadow: var(--shadow);
    border-radius: 11px 11px 0 0;
 }
 .fq-p{
-    font-size: 1.8rem;
-    color: var(--color);
-    margin: 0 1rem 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+}
+
+
+.fq-p.show-answer{
+    max-height: 300px;
+
     padding: 2rem;
+}
+.faq.active .fq-p{
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
 }
 /***** sigin up **************/
 .section-sigin{
@@ -592,9 +627,7 @@ margin-bottom: 2rem;
 }
 
 .sigin-img{
-    background-image:linear-gradient(to right bottom,
-    rgba(24, 100, 171,0.35),rgba(123, 81, 252, 0.35)), 
-    url(img/cta.jpg);
+    background-image:url(../img/cta.jpg);
    background-position: center;
     background-size:cover;
 }
@@ -619,7 +652,7 @@ color: #1f1e1e;
 .sigin-form input,
 .sigin-form select{
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     font-family: inherit;
     color: inherit;
     border: none;
@@ -648,6 +681,13 @@ color: #555;
 .sigin *:focus{
     outline: none;
     box-shadow:0 0 0 0.8rem rgba(247, 250, 253, 0.5);
+}
+.error-message{
+    display: block;
+    margin-top: .5rem;
+    font-size: 1.3rem;
+    color: #d62828;
+    font-weight: 500;
 }
 /********login ******************/
 .login-section{
@@ -853,6 +893,16 @@ line-height: 1.6;
    color: var(--bg);
 }
 
+
+
+
+.news-card{
+  padding:2rem;
+  margin:1rem 0;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
 
 
 

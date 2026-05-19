@@ -325,11 +325,11 @@ grid-row: 1;
    .step-img-box{
     margin-bottom: 1rem;
    }
-   .siging-img{
-     
-         background-image:url(img/speedexamlogo.png);
-    background-size: cover;
-      }
+   .sigin-img{
+    background-color: var(--grad-primary);
+    grid-row: 1;
+}
+
 .sigin{
     grid-template-columns: 1fr;
     grid-template-rows:1fr 2fr;

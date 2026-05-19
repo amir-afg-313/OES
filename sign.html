@@ -41,17 +41,20 @@
             </h2>
             <p class="sigin-text">مهرباني وکړي خپل پوره نوم او ایمیل داخل کړي 
              </p>
-            <form action="" class="sigin-form">
+           
+            <form action="" class="sigin-form" id="signu-pForm">
                 
               <div>
             <label for="name">پوره نوم ولیکي</label>
             <input type="text" id="name" placeholder="enter your name" required >
+            <small class="error-message"></small>
             </div>
 
 
 
               <div><label for="email">خپل ایمیل ادرس داخل کړي</label>
               <input type="email" id="email" placeholder="www.student.com" required>
+              <small class="error-message"></small>
               </div>
 
 
@@ -65,10 +68,11 @@
                <option value="ad">facebook</option>
                <option value="others">Others</option>
               </select>
+              <small class="error-message"></small>
             </div>
-
-              <button class="btn btn-form">Sign up now</button>
-
+           
+              <button class="btn btn-form" type="submit" >Sign up now</button>
+              
             </form>
           </div>
           <div class="sigin-img"></div>
@@ -128,6 +132,6 @@
             <p class="copyright"> <small>&copy;</small> 2025, All Rights Reserved | Terms of Use|Help & Support</p>
         </div>
     </footer>
-    <script defer src="JS/javaScript.js"></script>
+    <script defer src="JS/signup.js"></script>
 </body>
 </html>

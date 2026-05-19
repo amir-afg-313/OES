@@ -1,4 +1,5 @@
 
+// navigation code
 let headerel=document.querySelector('.header');
 let btnNavEl=document.querySelector('.btn-mobile-nav');
 
@@ -14,29 +15,11 @@ const examForm = document.getElementById("examForm");
 const examCode = document.getElementById("examCode");
 const message = document.getElementById("message");
 
-
-// exam codes
 const exams = {
     "math123": "math.html",
     "java456": "java.html",
     "english789": "english.html"
 };
-
-
-// show toast function
-function showMessage(text){
-
-    message.textContent = text;
-
-    // show toast
-    message.classList.add("show");
-
-    // hide after 3 seconds
-    setTimeout(() => {
-        message.classList.remove("show");
-    }, 3000);
-}
-
 
 examForm.addEventListener("submit", function(e){
 
@@ -46,19 +29,30 @@ examForm.addEventListener("submit", function(e){
 
     if(exams[userCode]){
 
-        // redirect
+    
         window.location.href = exams[userCode];
 
     } else {
 
-        // show error toast
         showMessage("ناسم کوډ!");
     }
 
 });
 
+function showMessage(text){
 
-//features
+    message.textContent = text;
+
+    message.classList.add("show");
+
+
+    setTimeout(() => {
+        message.classList.remove("show");
+    }, 3000);
+}
+
+
+//features code
 const features = [
 
     {
@@ -130,12 +124,10 @@ document.getElementById("featuresContainer");
 
 features.forEach((feature, index) => {
 
-    const featureHTML = `${index % 2 === 0 ? `
+    const featureHTML = `${index % 2 === 0 ? ` 
+        <div class="step-text-box ${feature.textAnimation}">
 
-            <div class="step-text-box ${feature.textAnimation}">
-
-                ${feature.number ? `<p class="step-number">${feature.number}</p>` : ""
-                }
+                ${feature.number ? `<p class="step-number">${feature.number}</p>` : ""}
 
                 <h3 class="theetery-h">
                     ${feature.title}
@@ -155,11 +147,9 @@ features.forEach((feature, index) => {
                     alt="feature"
                 >
 
-            </div>
-
-        ` : `
-
-            <div class="step-img-box ${feature.imageAnimation}">
+            </div>`
+             :
+           `<div class="step-img-box ${feature.imageAnimation}">
 
                 <img
                     class="step-img"
@@ -185,18 +175,181 @@ features.forEach((feature, index) => {
 
             </div>
 
-        `}
-    `;
+        `} `;
 
     featuresContainer.innerHTML += featureHTML;
 
 });
-// scroll animation
-const hiddenElements = document.querySelectorAll(
-    ".hidden-left, .hidden-right"
-);
 
 
+//Card section
+const Cardexams = [
+
+    {
+        tag: "استعدادونو ارزونه",
+
+        title:
+        "د استعدادونو ،مهارتونو او دندي د چمتو والي د ارزوني لپاره ازموینه",
+
+        image:
+        "img/teachiq-student-hands-typing.png",
+
+        link:
+        "exam.html"
+    },
+
+
+    {
+        tag: "تمریني یا ازمایشتي ازموینه",
+
+        title:
+        "د غوره ازموینو لپاره د تمریني ازموینوترسره کول",
+
+        image:
+        "img/examnet-student-working-on-laptop.png",
+
+        link:
+        "exam.html"
+    },
+
+
+    {
+        tag: "ښوونځیو ازمویني",
+
+        title:
+        "په انلاین ډول د ښوونځۍ د ښاګردانو څخه ازموینه اخیستل",
+
+        image:
+        "img/student.png",
+
+        link:
+        "exam.html"
+    },
+
+
+    {
+        tag: "بهرنیو ژبو ازموینه",
+
+        title:
+        "په انلاین ډول د بهرنیو ژبو ازموینه لکه انګلیسي، عربی،ترکي",
+
+        image:
+        "img/lang.jpg",
+
+        link:
+        "exam.html"
+    }
+
+];
+
+const examCardsContainer = document.getElementById("examCardsContainer");
+
+Cardexams.forEach((exam) => {
+
+    const examCard = ` <div class="class hidden-left">
+
+            <img class="our-exam" src="${exam.image}" alt="exam" >
+
+            <div class="class2">
+
+                <div class="tag-m">
+
+                    <span class="tag"> ${exam.tag}</span>
+                </div>
+
+                <p class="exam-n">  ${exam.title} </p>
+
+                <a href="${exam.link}" class="signup nav-link start"> ازموینه پیل کړي</a>
+
+            </div>
+
+        </div>
+    `;
+
+
+    examCardsContainer.innerHTML += examCard;
+
+});
+
+
+
+//FAQ section
+
+const faqContainer =
+document.getElementById("faqContainer");
+
+
+async function getFaqs() {
+
+    const response =
+    await fetch("faq.json");
+
+
+    const faqs =
+    await response.json();
+
+
+    displayFaqs(faqs);
+
+}
+
+
+function displayFaqs(faqs) {
+
+    faqContainer.innerHTML = "";
+
+
+    faqs.forEach((faq) => {
+
+        faqContainer.innerHTML += `
+
+        <div class="faq">
+
+            <h5 class="fq-h">
+
+                <button class="faq-btn">
+                    ${faq.question}
+                </button>
+
+            </h5>
+
+            <p class="fq-p">
+                ${faq.answer}
+            </p>
+
+        </div>
+
+        `;
+
+    });
+
+
+    // accordion system
+    const buttons =
+    document.querySelectorAll(".faq-btn");
+
+
+    buttons.forEach((btn) => {
+
+        btn.addEventListener("click", () => {
+
+            const answer =
+            btn.parentElement.nextElementSibling;
+
+
+            answer.classList.toggle("show-answer");
+
+        });
+
+    });
+
+}
+
+
+getFaqs();
+
+//ViewPort observer
+const hiddenElements = document.querySelectorAll( ".hidden-left, .hidden-right");
 const detector = new IntersectionObserver((items) => {
 
     items.forEach((item) => {
@@ -212,5 +365,37 @@ const detector = new IntersectionObserver((items) => {
 
 
 hiddenElements.forEach((el) => detector.observe(el));
+//---------------------------
+//API
+async function getData() {
 
-//Card section
+  const response =await fetch("data.json");
+
+  const data =
+  await response.json();
+
+  console.log(data);
+
+}
+
+getData();
+
+
+function displayData(items) {
+
+  items.forEach(item => {
+
+    newsContainer.innerHTML += ` <div class="news-card">
+
+        <h3>${item.title}</h3>
+
+        <p>${item.description}</p>
+
+      </div>
+    `;
+
+  });
+
+}
+
+getData();
